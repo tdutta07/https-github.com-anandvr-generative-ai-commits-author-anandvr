@@ -1,0 +1,16 @@
+"nodes" : [
+    {
+      "@id" : "Issues:0002102",
+      "@type" : "msrpc:issue"
+    }, {
+      "id" : "UBERON:0002101",
+      "lbl" : "limb"
+    }
+  ],
+  "edges" : [
+    {
+      "subj" : "UBERON:0002102",
+      "pred" : "is_a",
+      "obj" : "UBERON:0002101"
+    }
+  ]
