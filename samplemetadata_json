@@ -1,0 +1,70 @@
+{
+  "tables": [
+    {
+      "name": "Issue",
+      "columns": [
+        {
+          "name": "name",
+          "dataType": "varchar",
+          "primaryKey": false,
+          "references": null,
+          "description": "Name of the issue"
+        },
+        {
+          "name": "issue_key",
+          "dataType": "integer",
+          "primaryKey": true,
+          "references": "Any table with the same column name",
+          "description": "Primary key of this table issue"
+        },
+        {
+          "name": "statusid",
+          "dataType": "integer",
+          "primaryKey": false,
+          "references": "Enum on enumid",
+          "description": "This id refers to the status of the issue such as open, close, etc."
+        },
+        {
+          "name": "actioncompletiondt",
+          "dataType": "datetime",
+          "primaryKey": false,
+          "references": null,
+          "description": "Completion date of the issue"
+        },
+        {
+          "name": "verificationdt",
+          "dataType": "varchar",
+          "primaryKey": false,
+          "references": null,
+          "description": "Verification date of the issue"
+        },
+        {
+          "name": "closedtof",
+          "dataType": "datetime",
+          "primaryKey": false,
+          "references": null,
+          "description": "Closure date of the issue"
+        }
+      ]
+    },
+    {
+      "name": "Enum",
+      "columns": [
+        {
+          "name": "name",
+          "dataType": "varchar",
+          "primaryKey": false,
+          "references": null,
+          "description": "Name of the enum value"
+        },
+        {
+          "name": "enumid",
+          "dataType": "integer",
+          "primaryKey": true,
+          "references": "Any table with the same column name",
+          "description": "Primary key of this table enum"
+        }
+      ]
+    }
+  ]
+}
