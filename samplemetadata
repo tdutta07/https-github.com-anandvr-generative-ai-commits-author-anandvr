@@ -1,0 +1,8 @@
+This table- Issue contains column named -name of varchar dataype. This is not a primary key. It does not have any referances. This column describes - name of the issue.
+This table- Issue contains column named -issue_key of integer dataype. This is a primary key. It can be joined with any table which has same column name. This column describes - primary key of this table issue.
+This table- Issue contains column named -statusid of integer dataype. This is not a primary key. It can be used to join with Enum on enumid. This column describes - This id refers to the status of the issue such as open close ,etc. 
+This table- Issue contains column named -actioncompletiondt of datetime dataype. This is not a primary key. It does not have any referances. This column describes - completion date of the issue.
+This table- Issue contains column named -verificationdt of varchar dataype. This is not a primary key. It does not have any referances. This column describes - verification date of the issue.
+This table- Issue contains column named -closedtof datetime dataype. This is not a primary key. It does not have any referances. This column describes - closure date of the issue.
+This table- Enum contains column named -name of varchar dataype. This is not a primary key. It does not have any referances. This column describes - name of the enum value .
+This table- Enum contains column named -enumid of integer dataype. This is a primary key. It can be joined with any table which has same column name. This column describes - primary key of this table enum.
