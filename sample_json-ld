@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "msrpc": "http://example.org/msrpc/ontology/",
+    "msrpc3": "http://example.org/msrpc3/ontology/",
+    "msrpcx": "http://example.org/msrpcx/ontology/"
+  },
+  "@id": "msrpc3:_Issue_1",
+  "@type": "msrpc:Issue",
+  "rdfs:label": "1",
+  "msrpc:title": "Name of the issue",
+  "msrpc:description": "Description of the issue",
+  "msrpc:categorizedBy": {
+    "@id": "msrpcx:_IssueStatus_1",
+    "@type": "msrpcx:IssueStatus",
+    "rdfs:label": "Open"
+  },
+  "msrpc:readyForVerificationAtDateTime": "2022-01-01T10:00:00Z",
+  "msrpc:closedAtDateTime": "2022-02-01T15:00:00Z"
+}
