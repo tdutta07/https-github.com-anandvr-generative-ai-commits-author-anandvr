@@ -1,0 +1,11 @@
+JSON-LD  by using Public ontology rdf, rdfs, owl, skos and xsd along with msrpc ontology : 
+
+The issue with the ID is categorized as a "msrpc:Issue" and value should have prefix as "msrpc3:_Issue_". 
+Issue has preferred label which displays the id value of an issue. 
+Issue has title which represents the name of the issue and  description attribute contains the description.
+
+The issue is categorized by the status, which is type of IssueStatus and value has prefix as "msrpcx:_IssueStatus_".
+
+Issue has readyForVerificationAtDateTime which represnts verification date of the issue.
+
+Issue has closedAtDateTime which represents closure date of the issue.
