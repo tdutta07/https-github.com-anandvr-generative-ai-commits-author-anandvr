@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "msrpc": "http://example.org/msrpc/ontology/",
+    "msrpc3": "http://example.org/msrpc3/ontology/",
+    "msrpcx": "http://example.org/msrpcx/ontology/",
+
+	"label" : {
+	"@id: : skos:prefLabel",
+	"@type" : "xsd:string"
+	},
+	"data_source" : {
+	"@id" : "mscore:dataSource",
+	"@type" : "xsd:string"
+	},
+	"description" : {
+	"@id" : "mscore:description",
+	"@type" : "xsd:string"
+	},
+	"has_author" : {
+	"@id" : "mscore:hasAuthor",
+	"@type" : "mscore:Personnel"
+	},
+	"has_owner" : {
+	"@id" : "mscore:hasOwner",
+	"@type" : "mscore:Personnel"
+	},
+	"due_by" : {
+	"@id" : "msrpc:dueBy",
+	"@type" : "xsd:dateTime"
+	},
+	"impacted_region" : {
+	"@id" : "msrpc:impacts",
+	"@type" : "mscore:GeoRegion"
+	},
+	"impacted_org" : {
+	"@id" : "msrpc:impacts",
+	"@type" : ["mscore:MSOrg", "mscore:CostCentre", "mscore:LegalEntity"]
+	},
+	"status" : {
+	"@id" : "mscore:categorizedBy",
+	"@type" : "msrpc:IssueStatus"
+	},
+	"required": ["label", "description", "has_author", "has_owner", "due_by", "impacted_region", "impacted_org", "status"]
+	}
+}
