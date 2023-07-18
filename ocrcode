@@ -1,0 +1,24 @@
+import pytesseract
+from PIL import Image
+import os
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+folder_path = r"C:\test"
+
+output_file = r"C:\test\output.txt"
+
+
+for filename in os.listdir(folder_path):
+
+    if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp")):
+        image_path = os.path.join(folder_path, filename)
+
+        image = Image.open(image_path)
+        text = pytesseract.image_to_string(image)
+      
+        with open(output_file, "a") as file:
+            file.write("=== " + filename + " ===\n")
+            file.write(text + "\n\n")
+
+print("Text extracted from all images and saved to", output_file)
