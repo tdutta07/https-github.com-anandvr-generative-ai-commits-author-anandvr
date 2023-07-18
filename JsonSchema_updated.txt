@@ -1,0 +1,77 @@
+{
+    "@context": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "msrpc": "http://example.org/msrpc/ontology/",
+      "msrpc3": "http://example.org/msrpc3/ontology/",
+      "msrpcx": "http://example.org/msrpcx/ontology/"
+    },
+    "issue": {
+        "@id": "msrpc3:_Issue_ISS_",
+        "@type": "msrpc:Issue",
+        "rdfs:comment": "A potential risk or deficiency for which remidial action or monitoring is planned or anticipated to reduce a residual risk to an acceptable level"
+      },   
+    "label": {
+      "@id": "skos:prefLabel",
+      "@type": "xsd:string",
+      "rdfs:comment": "This property represents the preferred label for a resource."
+    },
+    "data_source": {
+      "@id": "mscore:dataSource",
+      "@type": "xsd:string",
+      "rdfs:comment": "This property represents the source for the data for the Subject"
+    },
+    "description":{
+      "@id": "mscore:description",
+      "@type": "xsd:string",
+      "rdfs:comment": "The description of the subject"
+    },
+    "has_author":{
+        "@id": "mscore:hasAuthor",
+        "@type": "mscore:Personnel",
+        "rdfs:comment": "The subject is written by the object"
+    },
+    "has_owner":{
+        "@id": "mscore:hasOwner",
+        "@type": "mscore:Personnel",
+        "rdfs:comment": "A transitive property in which the object exercises ownership rights over the Subject, or has some responsibility for the subject"
+    },
+    "due_by":{
+        "@id": "msrpc:originallyDueBy",
+        "@type": "xsd:dateTime",
+        "rdfs:comment": "The subject is or was originally expected or planned for at a certain time or date"
+    },
+    "due_on":{
+        "@id": "msrpc:originallyDueOn",
+        "@type": "xsd:dateTime",
+        "rdfs:comment": "The original Date and Time upon which the subject was due"        
+    },
+    "status":{
+        "@id": "mscore:categorizedBy",
+        "@type": "msrpc:IssueStatus",
+        "@enum": ["msrpcx:_IssueStatus_Open", "msrpcx:_IssueStatus_Closed", "msrpcx:_IssueStatus_PendingVerification", "msrpcx:_IssueStatus_Draft"],
+        "rdfs:comment": "Points to a taxonomy items or other less fomally defined class"        
+    },
+    "impacted_region":{
+        "@id": "msrpc:impacts",
+        "@type": ["mscore:GeoRegion", "mscore:CountryGeoRegion"],
+        "rdfs:comment": "The Subject has some kind of impact at a physical geographic location (Object)"        
+    },
+    "impacted_org":{
+        "@id": "msrpc:impacts",
+        "@type": ["mscore:CostCenter", "mscore:LegalEntity"],
+        "rdfs:comment": "The Subject has some kind of impact to an Organization (Object)"        
+    },
+    "remidiated_by":{
+        "@id": "msrpc:isRemidiatedBy",
+        "@type": "msrpc:ActionPlan",
+        "rdfs:comment": "The Subject is corrected by an Object"     
+    },
+    
+    "required": ["issue", "label", "description", "due_by", "status", "impacted_region", "impacted_org"]
+
+  }
+  
