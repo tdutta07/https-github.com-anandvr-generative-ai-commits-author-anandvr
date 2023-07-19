@@ -27,12 +27,12 @@
     "description":{
       "@id": "mscore:description",
       "@type": "xsd:string",
-      "rdfs:comment": "The description of the subject"
+      "rdfs:comment": "The description of the subject Issue"
     },
     "has_author":{
         "@id": "mscore:hasAuthor",
         "@type": "mscore:Personnel",
-        "rdfs:comment": "The subject is written by the object"
+        "rdfs:comment": "The subject Issue is written by the Personnel who is a direct-hire or individual contractor/contingent worker."
     },
     "has_owner":{
         "@id": "mscore:hasOwner",
@@ -53,7 +53,7 @@
         "@id": "mscore:categorizedBy",
         "@type": "msrpc:IssueStatus",
         "@enum": ["msrpcx:_IssueStatus_Open", "msrpcx:_IssueStatus_Closed", "msrpcx:_IssueStatus_PendingVerification", "msrpcx:_IssueStatus_Draft"],
-        "rdfs:comment": "Points to a taxonomy items or other less fomally defined class"        
+        "rdfs:comment": "This is a status category to capture what state an Issue is in at any given time."        
     },
     "impacted_region":{
         "@id": "msrpc:impacts",
@@ -70,7 +70,6 @@
         "@type": "msrpc:ActionPlan",
         "rdfs:comment": "The Subject is corrected by an Object"     
     },
-    
     "required": ["issue", "label", "description", "due_by", "status", "impacted_region", "impacted_org"]
 
   }
