@@ -103,16 +103,58 @@
         "skos:preflabel": "Closure Verification" 
       },      
       {
-        "@id": "msrpchasProposedOwner:",
+        "@id": "msrpc:hasProposedOwner",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
           "@id": "mscore:Personnel"
         },
+        "skos:defination": "The Object (e.g. Personnel) has been proposed to be the New owner of the Subject (e.g. ControlInstance).",
+        "skos:preflabel": "Has Proposed Owner"        
+      },
+      {
+        "@id": "mscore:Personnel",
+        "skos:definition": "A direct-hire employee of Morgan Stanley, or an individual contractor/contingent worker. (This includes contractors who are allowed to log into MS systems and operate much as employees. It does not include vendors who are not individually recognized by MS.)",
+        "skos:prefLabel": "Personnel"
+      },      
+      {
+        "@id": "msrpc:isIssueAt",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Country"
+        },
+        "skos:defination": "The Subject is an issue at a physical geographic location (Object) .",
+        "skos:preflabel": "Is Issue At"        
+      },
+      {
+        "@id": "mscore:Country",
+        "skos:definition": "A nation with its own government, occupying a particular territory. A region recognized as an independent political entity.",
+        "skos:prefLabel": "[DEPRECATED] Country"
+      },      
+      {
+        "@id": "mscore:isIssueAt",
+        "rdfs:domain":{
+          "@id": "mscore:GeoRegion"
+        }
+      },
+      {
+        "@id": "mscore:GeoRegion",
+        "skos:definition": "A bounded region (or set of regions) on the surface of the Earth.",
+        "skos:prefLabel": "Geo Region"
+      },      
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
         "skos:defination": "",
         "skos:preflabel": ""        
-
       },
       {
         "@id": "mscore:",
@@ -124,7 +166,6 @@
         },
         "skos:defination": "",
         "skos:preflabel": ""        
-
       },
       {
         "@id": "mscore:",
@@ -136,7 +177,6 @@
         },
         "skos:defination": "",
         "skos:preflabel": ""        
-
       },
       {
         "@id": "mscore:",
@@ -148,8 +188,29 @@
         },
         "skos:defination": "",
         "skos:preflabel": ""        
-
-      }                                        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      }                                                                       
 
 
 
