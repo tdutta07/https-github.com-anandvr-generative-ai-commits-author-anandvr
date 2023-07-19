@@ -162,6 +162,199 @@
         "skos:prefLabel": "Action Plan"
       },      
       {
+        "@id": "msrpc:hasIdentifiedRisk",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskCategory"
+        },
+        "skos:defination": "The Subject, often a process, has the Object, an identified risk which impacts the process.",
+        "skos:preflabel": "Has Identified Risk"        
+      },
+      {
+        "@id": "msrpc:RiskCategory",
+        "skos:definition": "A type of risk typically in a taxonomy for categorizing potential risk events.",
+        "skos:prefLabel": "Risk Category"
+      },       
+      {
+        "@id": "msrpc:statusCommentAuthor",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:defination": "Indicates that a subject has a status comment author.",
+        "skos:preflabel": "Status Comment Author"        
+      },
+      {
+        "@id": "mscore:Personnel",
+        "skos:definition": "A direct-hire employee of Morgan Stanley, or an individual contractor/contingent worker. (This includes contractors who are allowed to log into MS systems and operate much as employees. It does not include vendors who are not individually recognized by MS.)",
+        "skos:prefLabel": "Personnel"
+      },       
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:SoftwareAgent"
+        },
+        "skos:defination": "The Subject has been identified as an Issue that may adversely affect the Object",
+        "skos:preflabel": "Is Identified Issue With"        
+      },
+      {
+        "@id": "mscore:SoftwareAgent",
+        "skos:definition": "[Per PROV-O] A running/executing piece of software, characterized by performing actions and producing effects.",
+        "skos:prefLabel": "Software Agent"
+      },      
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:BusinessProcessCategory"
+        }       
+      },
+      {
+        "@id": "msrpc:BusinessProcessCategory",
+        "skos:definition": "A representation of a collection or processes of subprocesses within the Business Process Taxonomy Structure.",
+        "skos:prefLabel": "Business Process Category"
+      },      
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:MorganStanleOrganization"
+        }  
+      },
+      {
+        "@id": "mscore:MorganStanleOrganization",
+        "skos:definition": "A divisional or departmental organization that is part of Morgan stanley.",
+        "skos:prefLabel": "Morgan stanley Organization"
+      },
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:CostCenter"
+        }  
+      },
+      {
+        "@id": "mscore:CostCenter",
+        "skos:definition": "A defined, virtual , memberless organization to which direct and indirect costs are allocated.",
+        "skos:prefLabel": "Cost Center"
+      },
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:ControlCategory"
+        }  
+      },
+      {
+        "@id": "mscore:ControlCategory",
+        "skos:definition": "A type of control, e.g in a taxonomy of control types.",
+        "skos:prefLabel": "Control Category"
+      }, 
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:Control"
+        }  
+      },
+      {
+        "@id": "mscore:Control",
+        "skos:definition": "A mitigating action or intitiative that is applied against Firm risk(s) to reduce the impact and/or frequency with which the risk(s) would otherwise manifest themselves.",
+        "skos:prefLabel": "Control"
+      },  
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "msrpc:ProcessRisk"
+        }  
+      },
+      {
+        "@id": "msrpc:ProcessRisk",
+        "skos:definition": "A synthetic object represnting a particular risk associated with a particular process.",
+        "skos:prefLabel": "Process Risk"
+      },                                       
+      {
+        "@id": "msrpc:hasRootCause",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RootCauseType"
+        },
+        "skos:defination": "The Obeject is the primary factor that results in the Subject.",
+        "skos:preflabel": "Has Root Cause"        
+      },
+      {
+        "@id": "msrpc:RootCauseType",
+        "skos:definition": "A classification for why something has happened.",
+        "skos:prefLabel": "Root Cause type"
+      },          
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskFrequencyType"
+        },
+        "skos:defination": "A determination of some aspect or quality of the Subject and the result is the Object",
+        "skos:preflabel": "Is Assessed As"        
+      },
+      {
+        "@id": "msrpc:RiskFrequencyType",
+        "skos:definition": "A category indicating the likelihood of occurrence or re-occurrence of a risk event. E.g. infrequent, occasional.",
+        "skos:prefLabel": "Risk Frequency Type"
+      },
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:range":{
+          "@id": "msrpc:RiskRating"
+        }      
+      },  
+      {
+        "@id": "msrpc:RiskRating",
+        "skos:definition": "A numerical rating ranging from one to eight that corresponds to a given combination of impact and frequency for a particular risk.",
+        "skos:prefLabel": "Risk Rating"
+      },                                                                                          
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
         "@id": "mscore:",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
@@ -215,7 +408,172 @@
         },
         "skos:defination": "",
         "skos:preflabel": ""        
-      }                                                                       
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+      }                                                                                                                              
 
 
 
