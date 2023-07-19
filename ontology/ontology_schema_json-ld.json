@@ -8,12 +8,9 @@
       "msrpc": "https://example.org/msrpc/ontology/",
       "msrpc3": "http://example.org/msrpc3/ontology/",
       "msrpcx": "http://example.org/msrpcx/ontology/",
-      "mscir": "http://example.org/mscir/ontology/",
-      "mscir3": "http://example.org/msrpc3/ontology/",
-      "mscirx": "http://example.org/msrpcx/ontology/"      
+      "mscore": "https://example.org/mscore/ontology/" 
     },
-    
-    
+        
     
     "@graph":[
       {
@@ -322,266 +319,197 @@
         "skos:prefLabel": "Risk Rating"
       },                                                                                          
       {
-        "@id": "mscore:",
+        "@id": "msrpc:hasContributor",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
+          "@id": "mscore:Personnel" 
         },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "skos:defination": "This property indicates that a subject has a Contributor.",
+        "skos:preflabel": "Has Contributor"        
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:hasOwnerOrg",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
+          "@id": "mscore:CostCenter"
         },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "skos:defination": "The Object is the Organization of the Owner of the Subject.",
+        "skos:preflabel": "Has Owner Organization"        
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:hasOwnerOrg",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "mscore:MorganStanleOrganization"
+        }      
       },
       {
-        "@id": "mscore:",
+        "@id": "mscore:resultsIn",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
+          "@id": "msrpc:RiskAcceptance"
         },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "skos:defination": "The Object exists as a consequence of the Subject, but without implying agency on the Subject's part.",
+        "skos:preflabel": "Results In"        
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:RiskAcceptance",
+        "skos:definition": "The acceptance of a risk through a documented decision that is approved by an appropriate risk committee for a specified period of time, applying to risks that are assessed as hight or critical under the Frim's Risk Level Standards.",
+        "skos:prefLabel": "Risk Acceptance"
+      },        
+      {
+        "@id": "mscore:resultsFrom",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
+          "@id": "msrpc:Assessment"
         },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "skos:defination": "The Subject exists as a consequence of the Object, but without implying agency on the Object's part.",
+        "skos:preflabel": "Results From"        
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:Assessment",
+        "skos:definition": "An event whereby a determination is made as to the nature and or quality of something.",
+        "skos:prefLabel": "Assessment"
+      },       
+      {
+        "@id": "mscore:categorizedBy",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
+          "@id": "msrpc:RiskRemediationType"
         },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "skos:defination": "Points to a taxonomy item or other less formally defined class.",
+        "skos:preflabel": "Categorized By"        
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:RiskRemediationType",
+        "skos:definition": "The decision of whether to remidiate or accept a risk.",
+        "skos:prefLabel": "Risk Remidiation Type"
+      },      
+      {
+        "@id": "mscore:categorizedBy",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "msrpc:SensitivityType"
+        }     
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:SensitivityType",
+        "skos:definition": "A flag to indicate if the issue contains highly confidential information that should not be made available to general users. Only the Assessment stakeholders (Assessment Coordinator or Assessment Owner) or those named on the issue will be able to see the confidential items.",
+        "skos:prefLabel": "Sensitivity"
+      },      
+      {
+        "@id": "mscore:categorizedBy",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "msrpc:RiskImpactType"
+        } 
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:RiskImpactType",
+        "skos:definition": "The nature of the impact, e.g. economic, regulatory.",
+        "skos:prefLabel": "Risk Impact Type"
+      },       
+      {
+        "@id": "mscore:categorizedBy",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "msrpc:ControlDeficiencyStatus"
+        }      
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:ControlDeficiencyStatus",
+        "skos:definition": "This is a status to determine, when there is a control deficiency, what kind of deficiency it is.",
+        "skos:prefLabel": "Control Deficiency"
+      },      
+      {
+        "@id": "mscore:categorizedBy",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "msrpc:ActionPlanStatus"
+        }    
       },
       {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "@id": "msrpc:ActionPlanStatus",
+        "skos:definition": "A status indicates the current state of an Action Plan.",
+        "skos:prefLabel": "Action Plan Status"
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:isAssessedAs",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
+          "@id": "msrpc:FirmWideRiskLevel"
         },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "skos:defination": "A determination of some aspect or quality of the Subject and the result is the Object",
+        "skos:preflabel": "Is Assessed As"        
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:FirmWideRiskLevel",
+        "skos:definition": "A Level of risk established relative to risk tolerance, that applies at the overall firm level.",
+        "skos:prefLabel": "Firmwide Risk Level"
+      },      
+      {
+        "@id": "msrpc:isAssessedAs",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "msrpc:RiskFrequencyType"
+        }      
       },
       {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "@id": "msrpc:RiskFrequencyType",
+        "skos:definition": "A category indicating the likelihood of occurrence or re-occurrence of a risk event. E.g. infrequent, occasional.",
+        "skos:prefLabel": "Risk Frequency Type"
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:isAssessedAs",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "msrpc:RiskImpactLevel"
+        }  
       },
       {
-        "@id": "mscore:",
+        "@id": "msrpc:RiskImpactLevel",
+        "skos:definition": "A measure of the severity of the risk, on an A-H scae from minor to severe.",
+        "skos:prefLabel": "Risk Impact Level"
+      },      
+      {
+        "@id": "msrpc:isAssessedAs",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+          "@id": "msrpc:RiskRating"
+        }      
       },
       {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
-      },
-      {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
-      },
-      {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
-      },
-      {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
-      },
-      {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
-      },
-      {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
-      },
-      {
-        "@id": "mscore:",
-        "rdfs:domain":{
-          "@id": "msrpc:Issue"
-        },
-        "rdfs:range":{
-          "@id": ""
-        },
-        "skos:defination": "",
-        "skos:preflabel": ""        
-      }                                                                                                                              
-
-
-
-
-
-
+        "@id": "msrpc:RiskRating",
+        "skos:definition": "A numerical rating ranging from one to eight that corresponds to a given combination of impact and frequency for a particular risk.",
+        "skos:prefLabel": "Risk Impact Level"
+      }
     ]
-
-
-
   }   
