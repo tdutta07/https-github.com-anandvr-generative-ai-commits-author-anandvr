@@ -1,0 +1,163 @@
+{
+    "@context": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "msrpc": "http://example.org/msrpc/ontology/",
+      "msrpc3": "http://example.org/msrpc3/ontology/",
+      "msrpcx": "http://example.org/msrpcx/ontology/"
+    },
+
+    "@graph":[
+
+      {
+        "@id": "mscore:hasAuthor",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:definition": "The subject is written by the Object.",
+        "skos:prefLabel" : "Has Author"
+      },
+      {
+        "@id": "mscore:Personnel",
+        "skos:definition": "A direct-hire employee of Morgan Stanley, or an individual contractor/contingent worker. (This includes contractors who are allowed to log into MS systems and operate much as employees. It does not include vendors who are not individually recognized by MS.)",
+        "skos:prefLabel": "Personnel"
+      },
+      {
+        "@id": "mscore:hasOwner",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:defination": "A transitive property in which the objectexercises ownership rights over the subject, or has some responsibility for the subject, or has some responsibility for the Subject.",
+        "skos:preflabel": "Has Owner"
+      },
+      {
+        "@id": "mscore:categorizedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:IssueStatus"
+        },
+        "skos:defination": "Points to a taxonomy item or other less formally defined class.",
+        "skos:preflabel": "Categorized By"        
+
+      },
+      {
+        "@id": "msrpc:IssueStatus",
+        "skos:defination": "Points to a status category to capture what state an issue is in at any given time",
+        "skos:preflabel": "Issue Status" 
+
+      },
+      
+      
+      {
+        "@id": "msrpc:hasPrimaryIdentifiedRisk:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskCategory"
+        },
+        "skos:defination": "Relates something, often a process, to the primary accociated risk.",
+        "skos:preflabel": "Has Primary Identified Risk"        
+      },
+      {
+        "@id": "msrpc:RiskCategory",
+        "skos:defination": "A type of risk typically in a taxonomy for categorizing potential risk events.",
+        "skos:preflabel": "Risk Category" 
+      },      
+      {
+        "@id": "msrpc:hasIdentifiedRisk",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskCategory"
+        },
+        "skos:defination": "The Subject, often a process, has the Object, an identified risk which impacts the process.",
+        "skos:preflabel": "Has Identified Risk"        
+      },
+      {
+        "@id": "mscore:requires",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:ClosureVerification"
+        },
+        "skos:defination": "An intention that sets out a state of satisfaction (You are required to drive on right side of the road)",
+        "skos:preflabel": "Requires"        
+      },
+      {
+        "@id": "msrpc:ClosureVerification",
+        "skos:defination": "The assurance that an issue has been resolved prior to being closed, requires for all high and critical issues. The responsibility is assigned to a Closure Verification Owner.",
+        "skos:preflabel": "Closure Verification" 
+      },      
+      {
+        "@id": "msrpchasProposedOwner:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+
+      },
+      {
+        "@id": "mscore:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": ""
+        },
+        "skos:defination": "",
+        "skos:preflabel": ""        
+
+      }                                        
+
+
+
+
+
+
+    ]
+
+
+
+  }   
