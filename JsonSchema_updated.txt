@@ -10,7 +10,7 @@
       "msrpcx": "http://example.org/msrpcx/ontology/"
     },
     "issue": {
-        "@id": "msrpc3:_Issue_ISS_",
+        "@id": "msrpc:Issue",
         "@type": "msrpc:Issue",
         "rdfs:comment": "A potential risk or deficiency for which remidial action or monitoring is planned or anticipated to reduce a residual risk to an acceptable level"
       },   
