@@ -5,13 +5,17 @@
       "owl": "http://www.w3.org/2002/07/owl#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "msrpc": "http://example.org/msrpc/ontology/",
+      "msrpc": "https://example.org/msrpc/ontology/",
       "msrpc3": "http://example.org/msrpc3/ontology/",
-      "msrpcx": "http://example.org/msrpcx/ontology/"
+      "msrpcx": "http://example.org/msrpcx/ontology/",
+      "mscir": "http://example.org/mscir/ontology/",
+      "mscir3": "http://example.org/msrpc3/ontology/",
+      "mscirx": "http://example.org/msrpcx/ontology/"      
     },
-
+    
+    
+    
     "@graph":[
-
       {
         "@id": "mscore:hasAuthor",
         "rdfs:domain":{
@@ -49,16 +53,12 @@
         },
         "skos:defination": "Points to a taxonomy item or other less formally defined class.",
         "skos:preflabel": "Categorized By"        
-
       },
       {
         "@id": "msrpc:IssueStatus",
         "skos:defination": "Points to a status category to capture what state an issue is in at any given time",
         "skos:preflabel": "Issue Status" 
-
       },
-      
-      
       {
         "@id": "msrpc:hasPrimaryIdentifiedRisk:",
         "rdfs:domain":{
@@ -146,16 +146,21 @@
         "skos:prefLabel": "Geo Region"
       },      
       {
-        "@id": "mscore:",
+        "@id": "msrpc:isRemediatedBy",
         "rdfs:domain":{
           "@id": "msrpc:Issue"
         },
         "rdfs:range":{
-          "@id": ""
+          "@id": "msrpc:ActionPlan"
         },
-        "skos:defination": "",
-        "skos:preflabel": ""        
+        "skos:defination": "The subject is remidiated/resolved by the Object.",
+        "skos:preflabel": "Is Remidiated By"        
       },
+      {
+        "@id": "msrpc:ActionPlan",
+        "skos:definition": "A detailed description of steps to be implemented to remidiate, eliminate or lower a risk, or resolve an Issue.",
+        "skos:prefLabel": "Action Plan"
+      },      
       {
         "@id": "mscore:",
         "rdfs:domain":{
