@@ -1,0 +1,6 @@
+# Python specific
+.venv
+__pycache__
+
+# User specific
+.vscode
