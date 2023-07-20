@@ -5,11 +5,14 @@
       "owl": "http://www.w3.org/2002/07/owl#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "msrpc": "https://example.org/msrpc/ontology/",
-      "msrpc3": "http://example.org/msrpc3/ontology/",
-      "msrpcx": "http://example.org/msrpcx/ontology/",
-      "mscore": "https://example.org/mscore/ontology/" 
+      "msrpc": "https://ontologies.ms.com/msrpc/",
+      "msrpc3": "http://triples.ms.com/msrpc/",
+      "msrpcx": "http://taxonomies.ms.com/msrpc/",
+      "mscore": "https://ontologies.ms.com/mscore/",
+      "mscore3": "http://triples.ms.com/mscore/",
+      "mscorex": "http://taxonomies.ms.com/mscore/"
     },
+        
         
     
     "@graph":[
