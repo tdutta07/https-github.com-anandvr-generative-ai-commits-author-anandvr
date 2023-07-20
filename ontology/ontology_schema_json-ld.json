@@ -1,0 +1,518 @@
+{
+    "@context": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "msrpc": "https://ontologies.ms.com/msrpc/",
+      "msrpc3": "http://triples.ms.com/msrpc/",
+      "msrpcx": "http://taxonomies.ms.com/msrpc/",
+      "mscore": "https://ontologies.ms.com/mscore/",
+      "mscore3": "http://triples.ms.com/mscore/",
+      "mscorex": "http://taxonomies.ms.com/mscore/"
+    },
+        
+        
+    
+    "@graph":[
+      {
+        "@id": "mscore:hasAuthor",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:definition": "The subject is written by the Object.",
+        "skos:prefLabel" : "Has Author"
+      },
+      {
+        "@id": "mscore:Personnel",
+        "skos:definition": "A direct-hire employee of Morgan Stanley, or an individual contractor/contingent worker. (This includes contractors who are allowed to log into MS systems and operate much as employees. It does not include vendors who are not individually recognized by MS.)",
+        "skos:prefLabel": "Personnel"
+      },
+      {
+        "@id": "mscore:hasOwner",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:defination": "A transitive property in which the objectexercises ownership rights over the subject, or has some responsibility for the subject, or has some responsibility for the Subject.",
+        "skos:preflabel": "Has Owner"
+      },
+      {
+        "@id": "mscore:categorizedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:IssueStatus"
+        },
+        "skos:defination": "Points to a taxonomy item or other less formally defined class.",
+        "skos:preflabel": "Categorized By"        
+      },
+      {
+        "@id": "msrpc:IssueStatus",
+        "skos:defination": "Points to a status category to capture what state an issue is in at any given time",
+        "skos:preflabel": "Issue Status" 
+      },
+      {
+        "@id": "msrpc:hasPrimaryIdentifiedRisk:",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskCategory"
+        },
+        "skos:defination": "Relates something, often a process, to the primary accociated risk.",
+        "skos:preflabel": "Has Primary Identified Risk"        
+      },
+      {
+        "@id": "msrpc:RiskCategory",
+        "skos:defination": "A type of risk typically in a taxonomy for categorizing potential risk events.",
+        "skos:preflabel": "Risk Category" 
+      },      
+      {
+        "@id": "msrpc:hasIdentifiedRisk",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskCategory"
+        },
+        "skos:defination": "The Subject, often a process, has the Object, an identified risk which impacts the process.",
+        "skos:preflabel": "Has Identified Risk"        
+      },
+      {
+        "@id": "mscore:requires",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:ClosureVerification"
+        },
+        "skos:defination": "An intention that sets out a state of satisfaction (You are required to drive on right side of the road)",
+        "skos:preflabel": "Requires"        
+      },
+      {
+        "@id": "msrpc:ClosureVerification",
+        "skos:defination": "The assurance that an issue has been resolved prior to being closed, requires for all high and critical issues. The responsibility is assigned to a Closure Verification Owner.",
+        "skos:preflabel": "Closure Verification" 
+      },      
+      {
+        "@id": "msrpc:hasProposedOwner",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:defination": "The Object (e.g. Personnel) has been proposed to be the New owner of the Subject (e.g. ControlInstance).",
+        "skos:preflabel": "Has Proposed Owner"        
+      },
+      {
+        "@id": "mscore:Personnel",
+        "skos:definition": "A direct-hire employee of Morgan Stanley, or an individual contractor/contingent worker. (This includes contractors who are allowed to log into MS systems and operate much as employees. It does not include vendors who are not individually recognized by MS.)",
+        "skos:prefLabel": "Personnel"
+      },      
+      {
+        "@id": "msrpc:isIssueAt",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Country"
+        },
+        "skos:defination": "The Subject is an issue at a physical geographic location (Object) .",
+        "skos:preflabel": "Is Issue At"        
+      },
+      {
+        "@id": "mscore:Country",
+        "skos:definition": "A nation with its own government, occupying a particular territory. A region recognized as an independent political entity.",
+        "skos:prefLabel": "[DEPRECATED] Country"
+      },      
+      {
+        "@id": "mscore:isIssueAt",
+        "rdfs:domain":{
+          "@id": "mscore:GeoRegion"
+        }
+      },
+      {
+        "@id": "mscore:GeoRegion",
+        "skos:definition": "A bounded region (or set of regions) on the surface of the Earth.",
+        "skos:prefLabel": "Geo Region"
+      },      
+      {
+        "@id": "msrpc:isRemediatedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:ActionPlan"
+        },
+        "skos:defination": "The subject is remidiated/resolved by the Object.",
+        "skos:preflabel": "Is Remidiated By"        
+      },
+      {
+        "@id": "msrpc:ActionPlan",
+        "skos:definition": "A detailed description of steps to be implemented to remidiate, eliminate or lower a risk, or resolve an Issue.",
+        "skos:prefLabel": "Action Plan"
+      },      
+      {
+        "@id": "msrpc:hasIdentifiedRisk",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskCategory"
+        },
+        "skos:defination": "The Subject, often a process, has the Object, an identified risk which impacts the process.",
+        "skos:preflabel": "Has Identified Risk"        
+      },
+      {
+        "@id": "msrpc:RiskCategory",
+        "skos:definition": "A type of risk typically in a taxonomy for categorizing potential risk events.",
+        "skos:prefLabel": "Risk Category"
+      },       
+      {
+        "@id": "msrpc:statusCommentAuthor",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel"
+        },
+        "skos:defination": "Indicates that a subject has a status comment author.",
+        "skos:preflabel": "Status Comment Author"        
+      },
+      {
+        "@id": "mscore:Personnel",
+        "skos:definition": "A direct-hire employee of Morgan Stanley, or an individual contractor/contingent worker. (This includes contractors who are allowed to log into MS systems and operate much as employees. It does not include vendors who are not individually recognized by MS.)",
+        "skos:prefLabel": "Personnel"
+      },       
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:SoftwareAgent"
+        },
+        "skos:defination": "The Subject has been identified as an Issue that may adversely affect the Object",
+        "skos:preflabel": "Is Identified Issue With"        
+      },
+      {
+        "@id": "mscore:SoftwareAgent",
+        "skos:definition": "[Per PROV-O] A running/executing piece of software, characterized by performing actions and producing effects.",
+        "skos:prefLabel": "Software Agent"
+      },      
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:BusinessProcessCategory"
+        }       
+      },
+      {
+        "@id": "msrpc:BusinessProcessCategory",
+        "skos:definition": "A representation of a collection or processes of subprocesses within the Business Process Taxonomy Structure.",
+        "skos:prefLabel": "Business Process Category"
+      },      
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:MorganStanleOrganization"
+        }  
+      },
+      {
+        "@id": "mscore:MorganStanleOrganization",
+        "skos:definition": "A divisional or departmental organization that is part of Morgan stanley.",
+        "skos:prefLabel": "Morgan stanley Organization"
+      },
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:CostCenter"
+        }  
+      },
+      {
+        "@id": "mscore:CostCenter",
+        "skos:definition": "A defined, virtual , memberless organization to which direct and indirect costs are allocated.",
+        "skos:prefLabel": "Cost Center"
+      },
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:ControlCategory"
+        }  
+      },
+      {
+        "@id": "mscore:ControlCategory",
+        "skos:definition": "A type of control, e.g in a taxonomy of control types.",
+        "skos:prefLabel": "Control Category"
+      }, 
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "mscore:Control"
+        }  
+      },
+      {
+        "@id": "mscore:Control",
+        "skos:definition": "A mitigating action or intitiative that is applied against Firm risk(s) to reduce the impact and/or frequency with which the risk(s) would otherwise manifest themselves.",
+        "skos:prefLabel": "Control"
+      },  
+      {
+        "@id": "msrpc:isIdentifiedIssueWith",
+        "rdfs:range":{
+          "@id": "msrpc:ProcessRisk"
+        }  
+      },
+      {
+        "@id": "msrpc:ProcessRisk",
+        "skos:definition": "A synthetic object represnting a particular risk associated with a particular process.",
+        "skos:prefLabel": "Process Risk"
+      },                                       
+      {
+        "@id": "msrpc:hasRootCause",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RootCauseType"
+        },
+        "skos:defination": "The Obeject is the primary factor that results in the Subject.",
+        "skos:preflabel": "Has Root Cause"        
+      },
+      {
+        "@id": "msrpc:RootCauseType",
+        "skos:definition": "A classification for why something has happened.",
+        "skos:prefLabel": "Root Cause type"
+      },          
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskFrequencyType"
+        },
+        "skos:defination": "A determination of some aspect or quality of the Subject and the result is the Object",
+        "skos:preflabel": "Is Assessed As"        
+      },
+      {
+        "@id": "msrpc:RiskFrequencyType",
+        "skos:definition": "A category indicating the likelihood of occurrence or re-occurrence of a risk event. E.g. infrequent, occasional.",
+        "skos:prefLabel": "Risk Frequency Type"
+      },
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:range":{
+          "@id": "msrpc:RiskRating"
+        }      
+      },  
+      {
+        "@id": "msrpc:RiskRating",
+        "skos:definition": "A numerical rating ranging from one to eight that corresponds to a given combination of impact and frequency for a particular risk.",
+        "skos:prefLabel": "Risk Rating"
+      },                                                                                          
+      {
+        "@id": "msrpc:hasContributor",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:Personnel" 
+        },
+        "skos:defination": "This property indicates that a subject has a Contributor.",
+        "skos:preflabel": "Has Contributor"        
+      },
+      {
+        "@id": "msrpc:hasOwnerOrg",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:CostCenter"
+        },
+        "skos:defination": "The Object is the Organization of the Owner of the Subject.",
+        "skos:preflabel": "Has Owner Organization"        
+      },
+      {
+        "@id": "msrpc:hasOwnerOrg",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "mscore:MorganStanleOrganization"
+        }      
+      },
+      {
+        "@id": "mscore:resultsIn",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskAcceptance"
+        },
+        "skos:defination": "The Object exists as a consequence of the Subject, but without implying agency on the Subject's part.",
+        "skos:preflabel": "Results In"        
+      },
+      {
+        "@id": "msrpc:RiskAcceptance",
+        "skos:definition": "The acceptance of a risk through a documented decision that is approved by an appropriate risk committee for a specified period of time, applying to risks that are assessed as hight or critical under the Frim's Risk Level Standards.",
+        "skos:prefLabel": "Risk Acceptance"
+      },        
+      {
+        "@id": "mscore:resultsFrom",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:Assessment"
+        },
+        "skos:defination": "The Subject exists as a consequence of the Object, but without implying agency on the Object's part.",
+        "skos:preflabel": "Results From"        
+      },
+      {
+        "@id": "msrpc:Assessment",
+        "skos:definition": "An event whereby a determination is made as to the nature and or quality of something.",
+        "skos:prefLabel": "Assessment"
+      },       
+      {
+        "@id": "mscore:categorizedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskRemediationType"
+        },
+        "skos:defination": "Points to a taxonomy item or other less formally defined class.",
+        "skos:preflabel": "Categorized By"        
+      },
+      {
+        "@id": "msrpc:RiskRemediationType",
+        "skos:definition": "The decision of whether to remidiate or accept a risk.",
+        "skos:prefLabel": "Risk Remidiation Type"
+      },      
+      {
+        "@id": "mscore:categorizedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:SensitivityType"
+        }     
+      },
+      {
+        "@id": "msrpc:SensitivityType",
+        "skos:definition": "A flag to indicate if the issue contains highly confidential information that should not be made available to general users. Only the Assessment stakeholders (Assessment Coordinator or Assessment Owner) or those named on the issue will be able to see the confidential items.",
+        "skos:prefLabel": "Sensitivity"
+      },      
+      {
+        "@id": "mscore:categorizedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskImpactType"
+        } 
+      },
+      {
+        "@id": "msrpc:RiskImpactType",
+        "skos:definition": "The nature of the impact, e.g. economic, regulatory.",
+        "skos:prefLabel": "Risk Impact Type"
+      },       
+      {
+        "@id": "mscore:categorizedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:ControlDeficiencyStatus"
+        }      
+      },
+      {
+        "@id": "msrpc:ControlDeficiencyStatus",
+        "skos:definition": "This is a status to determine, when there is a control deficiency, what kind of deficiency it is.",
+        "skos:prefLabel": "Control Deficiency"
+      },      
+      {
+        "@id": "mscore:categorizedBy",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:ActionPlanStatus"
+        }    
+      },
+      {
+        "@id": "msrpc:ActionPlanStatus",
+        "skos:definition": "A status indicates the current state of an Action Plan.",
+        "skos:prefLabel": "Action Plan Status"
+      },
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:FirmWideRiskLevel"
+        },
+        "skos:defination": "A determination of some aspect or quality of the Subject and the result is the Object",
+        "skos:preflabel": "Is Assessed As"        
+      },
+      {
+        "@id": "msrpc:FirmWideRiskLevel",
+        "skos:definition": "A Level of risk established relative to risk tolerance, that applies at the overall firm level.",
+        "skos:prefLabel": "Firmwide Risk Level"
+      },      
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskFrequencyType"
+        }      
+      },
+      {
+        "@id": "msrpc:RiskFrequencyType",
+        "skos:definition": "A category indicating the likelihood of occurrence or re-occurrence of a risk event. E.g. infrequent, occasional.",
+        "skos:prefLabel": "Risk Frequency Type"
+      },
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskImpactLevel"
+        }  
+      },
+      {
+        "@id": "msrpc:RiskImpactLevel",
+        "skos:definition": "A measure of the severity of the risk, on an A-H scae from minor to severe.",
+        "skos:prefLabel": "Risk Impact Level"
+      },      
+      {
+        "@id": "msrpc:isAssessedAs",
+        "rdfs:domain":{
+          "@id": "msrpc:Issue"
+        },
+        "rdfs:range":{
+          "@id": "msrpc:RiskRating"
+        }      
+      },
+      {
+        "@id": "msrpc:RiskRating",
+        "skos:definition": "A numerical rating ranging from one to eight that corresponds to a given combination of impact and frequency for a particular risk.",
+        "skos:prefLabel": "Risk Impact Level"
+      }
+    ]
+  }   
