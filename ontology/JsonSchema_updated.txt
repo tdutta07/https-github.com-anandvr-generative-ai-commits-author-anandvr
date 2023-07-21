@@ -12,12 +12,12 @@
     "issue": {
         "@id": "msrpc:Issue",
         "@type": "msrpc:Issue",
-        "rdfs:comment": "A potential risk or deficiency for which remidial action or monitoring is planned or anticipated to reduce a residual risk to an acceptable level"
+        "rdfs:comment": "This represents the unique individual Issue. An Issue is a potential risk or deficiency for which remidial action or monitoring is planned or anticipated to reduce a residual risk to an acceptable level"
       },   
     "label": {
       "@id": "skos:prefLabel",
       "@type": "xsd:string",
-      "rdfs:comment": "This property represents the preferred label for a resource."
+      "rdfs:comment": "This property represents the preferred lexical label or name of a resource or subject"
     },
     "data_source": {
       "@id": "mscore:dataSource",
