@@ -1,2 +1,8 @@
-.env
+# Python specific
+.venv
+__pycache__
 .ipynb_checkpoints/
+
+# User specific
+.vscode
+.env
