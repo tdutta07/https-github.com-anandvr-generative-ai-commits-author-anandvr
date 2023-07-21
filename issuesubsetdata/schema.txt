@@ -1,0 +1,14 @@
+This table-TestSchema. ENUMVALS contains column named - DESCRIPTION of datatype - VARCHAR. This is not a primary key for this table.This column describes-Description of an enumerated answer.
+This table-TestSchema. ENUMVALS contains column named - ENUMVALID of datatype - DECIMAL. This is [NULL] a primary key for this table.This column describes-Enumerated value ID\\
+This table-TestSchema. ENUMVALS contains column named - NAME of datatype - VARCHAR. This is not a primary key for this table.This column describes- Enumerated value name
+This table-TestSchema. ISSUE contains column named - DESCRIPTION of datatype - VARCHAR. This is not a primary key for this table.This column describes- Resource Description
+This table-TestSchema. ISSUE contains column named - IMPCTDORG of datatype - VARCHAR. This is not a primary key for this table.This column describes-The Organizations that are Impacted by the existence of an Issue\\
+This table-TestSchema. ISSUE contains column named - ISSDESCR of datatype - VARCHAR. This is not a primary key for this table.This column describes-The text providing further detail on the scope or objective of an Issue.
+This table-TestSchema. ISSUE contains column named - ISSORGNINDT of datatype - TIMESTAMP. This is not a primary key for this table.This column describes- Issue Origination Date - Data Issue
+This table-TestSchema. ISSUE contains column named - ISSRORG of datatype - VARCHAR. This is not a primary key for this table.This column describes-The organizations where the Issue exist
+This table-TestSchema. ISSUE contains column named - NAME00 of datatype - VARCHAR. This is not a primary key for this table.This column describes-Resource Name
+This table-TestSchema. ISSUE contains column named - ORGANIZATIONREGION of datatype - VARCHAR. This is not a primary key for this table.This column describes- Impacted and Issue Organizations and Regions
+This table-TestSchema. ISSUE contains column named - SLADUEDATE of datatype - TIMESTAMP. This is not a primary key for this table.This column describes-SLA Due Date
+This table-TestSchema. ISSUE contains column named - STTS of datatype - DECFLOAT. This is not a primary key for this table.This column can be used to join with TestSchema.ENUMVALS on ENUMVALID.This column describes-The status of an issue relative to the work being done to satisfy the Issue.
+This table-TestSchema. ISSUE contains column named - CREATION_DATE of datatype - TIMESTAMP. This is not a primary key for this table.This column describes-Resource Creation Date
+This table-TestSchema. ISSUE contains column named - CREATOR of datatype - DECFLOAT. This is not a primary key for this table.This column describes-Resource Creator

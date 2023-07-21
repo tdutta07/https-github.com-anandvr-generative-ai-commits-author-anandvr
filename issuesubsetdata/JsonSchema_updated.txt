@@ -1,0 +1,45 @@
+{
+    "@context": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "msrpc": "http://example.org/msrpc/ontology/",
+      "msrpc3": "http://example.org/msrpc3/ontology/",
+      "msrpcx": "http://example.org/msrpcx/ontology/"
+    },
+    "issue": {
+        "@id": "msrpc:Issue",
+        "@type": "xsd:string",
+        "rdfs:comment": "A potential risk or deficiency for which remidial action or monitoring is planned or anticipated to reduce a residual risk to an acceptable level"
+      },   
+    "description":{
+      "@id": "mscore:description",
+      "@type": "xsd:string",
+      "rdfs:comment": "The description of the subject Issue"
+    },
+    "has_author":{
+        "@id": "mscore:hasAuthor",
+        "@type": "mscore:Personnel",
+        "rdfs:comment": "The subject Issue is written by the Personnel who is a direct-hire or individual contractor/contingent worker."
+    },
+    "due_by":{
+        "@id": "msrpc:originallyDueBy",
+        "@type": "xsd:dateTime",
+        "rdfs:comment": "The subject is or was originally expected or planned for at a certain time or date"
+    },
+    "status":{
+        "@id": "mscore:categorizedBy",
+        "@type": "msrpc:IssueStatus",
+        "@enum": ["msrpcx:_IssueStatus_Open", "msrpcx:_IssueStatus_Closed", "msrpcx:_IssueStatus_PendingVerification", "msrpcx:_IssueStatus_Draft"],
+        "rdfs:comment": "This is a status category to capture what state an Issue is in at any given time."        
+    },	
+    "impacted_region":{
+        "@id": "msrpc:impacts",
+        "@type": ["mscore:GeoRegion", "mscore:CountryGeoRegion"],
+        "rdfs:comment": "The Subject has some kind of impact at a physical geographic location (Object)"        
+    },	
+     "required": ["issue",  "description", "due_by", "status", "impacted_region", "has_author"]
+
+  }
