@@ -12,17 +12,12 @@
     "issue": {
         "@id": "msrpc:Issue",
         "@type": "msrpc:Issue",
-        "rdfs:comment": "This represents the unique individual Issue. An Issue is a potential risk or deficiency for which remidial action or monitoring is planned or anticipated to reduce a residual risk to an acceptable level"
+        "rdfs:comment": "This represents each individual and unique Issue. An Issue is a potential risk or deficiency for which remidial action or monitoring is planned or anticipated to reduce a residual risk to an acceptable level"
       },   
     "label": {
       "@id": "skos:prefLabel",
       "@type": "xsd:string",
       "rdfs:comment": "This property represents the preferred lexical label or name of a resource or subject"
-    },
-    "data_source": {
-      "@id": "mscore:dataSource",
-      "@type": "xsd:string",
-      "rdfs:comment": "This property represents the source for the data for the Subject"
     },
     "description":{
       "@id": "mscore:description",
@@ -69,8 +64,7 @@
         "@id": "msrpc:isRemidiatedBy",
         "@type": "msrpc:ActionPlan",
         "rdfs:comment": "The Subject is corrected by an Object"     
-    },
-    "required": ["issue", "label", "description", "due_by", "status", "impacted_region", "impacted_org"]
+    }
 
   }
   
